@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CostNet.ph</title>
+  <link rel="icon" href="./images/title-log.png" />
+  <style>
+    /* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background: linear-gradient(to top, #0d0d9e 0%, black 100%);
+    line-height: 2.4;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: transparent;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    position: relative;
+}
+
+.navbar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: rgb(78, 47, 255);
+    box-shadow: 0 2px 8px white;
+}
+
+
+.nav-logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-weight: 500;
+    color: white;
+}
+
+.quote-button .btn {
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.quote-button .btn:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+/* Mobile Navbar */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+    /* Form Section Styling */
+    .form-section {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 60px 20px;
+      color: #eee;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(100, 100, 255, 0.2);
+    }
+
+    .form-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-step {
+      display: none;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    /* Show current step if targeted */
+    .form-step:target {
+      display: flex;
+    }
+
+    /* Show first step only when no hash */
+    body:not(:has(:target)) .form-step:first-of-type {
+      display: flex;
+    }
+
+    label {
+      font-weight: 500;
+    }
+
+    input,
+    select {
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      width: 100%;
+    }
+
+    input::placeholder {
+      color: #ccc;
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 20px;
+    }
+
+    .btn, button {
+      margin-top: 20px;
+      padding: 12px;
+      background: #6c63ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .btn:hover,
+    button:hover {
+      background: #554ff4;
+    }
+
+    @media (max-width: 768px) {
+      .form-section h2 {
+        font-size: 2rem;
+      }
+
+      input,
+      select {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-logo">
+      <img src="./images/-newlogo-title.png" alt="Company Logo" />
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="business.html">Businesses</a>
+      <a href="developer.html">Developer</a>
+      <a href="FAQ.html">FAQ</a>
+    </nav>
+    <div class="quote-button">
+      <a href="quote.html" class="btn">Get a Quote</a>
+    </div>
+  </header>
+
+  <section class="form-section">
+    <h2>Join Our Network</h2>
+
+    <form class="form-container">
+      <!-- Step 1 -->
+      <div class="form-step" id="step1">
+        <label>Are you underage?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="underage" value="yes" required /> Yes</label>
+          <label><input type="radio" name="underage" value="no" /> No</label>
+        </div>
+
+        <label for="birthday">Birthday</label>
+        <input type="date" id="birthday" required />
+        <a href="#step2" class="btn">Next</a>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="form-step" id="step2">
+        <label for="name">What's your name?</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Best email to reach you?</label>
+        <input type="email" id="email" required />
+
+        <label for="phone">What's your phone number?</label>
+        <input type="tel" id="phone" required />
+
+        <a href="#step3" class="btn">Next</a>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="form-step" id="step3">
+        <label for="experience">Do you have experience with coins?</label>
+        <select id="experience" required>
+          <option value="" disabled selected>Select an option</option>
+          <option>No Experience</option>
+          <option>Basic Knowledge</option>
+          <option>Trader</option>
+          <option>Investor</option>
+        </select>
+<br><br><Br><br>
+        <a href="index.html" class="btn">Start Over</a>
+        
+
+      </div>
+    </form>
+  </section>
+<br><br><Br><br>
+</body>
+</html>
