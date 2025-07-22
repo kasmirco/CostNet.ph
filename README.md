@@ -1,41 +1,21 @@
-<!-- Banner -->
-<p align="center">
-  <img src="https://raw.githubusercontent.com/kasmirco/CostNet.ph/main/assets/logo.png" width="150" alt="CostNet Logo" />
-</p>
-
-<h1 align="center">💰 CostNet.ph</h1>
-
-<p align="center">
-  A fictional static cryptocurrency landing page inspired by Bitcoin — introducing the new digital coin <strong>"C"</strong> by CostNet.
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/status-completed-brightgreen.svg" />
-  <img src="https://img.shields.io/badge/design-minimal-blueviolet" />
-  <img src="https://img.shields.io/badge/build-static-orange" />
-</p>
+# README for CostNet
 
 ---
 
-## 🚀 Project Overview
+## 📊 Project Overview
 
-**CostNet.ph** is a fictional landing page for a cryptocurrency project that revolves around the digital coin symbolized by **“C”**. Built as a static website using only HTML and CSS, the design showcases a modern, crypto-inspired aesthetic with smooth layout and sleek visual hierarchy. This project demonstrates clean markup structure, responsive layout techniques, and basic visual storytelling.
+The **CostNet** project is a static website inspired by cryptocurrency, specifically Bitcoin. It serves as a platform to provide information about the fictional cryptocurrency represented by the coin "C". The website is designed using HTML and CSS, offering a clean and modern interface for users interested in cryptocurrency.
 
 ---
 
 ## 🛠️ Tech Stack
 
-<p align="left">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-</p>
-
-- **HTML5** – For semantic structure and content
-- **CSS3** – For layout, responsiveness, and visual styling
+- **HTML** ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+- **CSS** ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 
 ---
 
-## 📁 Folder Structure
+## 📁 Project Structure
 
 ```
 CostNet/
@@ -50,23 +30,42 @@ CostNet/
 └── styles.css             # CSS styles for the website
 ```
 
-
 ---
 
-## 📸 Screenshots
+## 🚀 Getting Started
 
-> Include these in your repo if available — placeholder below.
+To get started with the CostNet project, follow these steps:
 
-![Homepage Screenshot](https://raw.githubusercontent.com/kasmirco/CostNet.ph/main/assets/screenshot.png)
-
----
-
-## 📦 How to Use
-
-You can run this project locally by simply opening the `index.html` file in your browser.
-
-### 🔧 Steps:
-
-1. Clone the repository:
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/kasmirco/CostNet.ph.git
+   ```
+
+2. **Navigate to the project directory:**
+   ```bash
+   cd CostNet.ph
+   ```
+
+3. **Open `index.html` in your web browser.**
+
+---
+
+## 📖 Features
+
+- **Static Website:** A fully static website with no backend processing.
+- **Responsive Design:** Designed to be user-friendly on both desktop and mobile devices.
+- **Informative Pages:** Includes various pages providing information about the cryptocurrency and its ecosystem.
+
+---
+
+## 📧 Contact
+
+For any inquiries or feedback, please reach out via email at [johnkennethcostinar@gmail.com](mailto:johnkennethcostinar@gmail.com).
+
+---
+
+## 📅 Last Updated
+
+This README was last updated on **Tuesday, July 22, 2025**.
+
+---
